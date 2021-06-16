@@ -1,8 +1,8 @@
-#===============================================================================
-#   Author: Wenxuan
-#    Email: wenxuangm@gmail.com
-#  Created: 2018-04-05 17:37
-#===============================================================================
+# =============================================================================
+# Author: Chu Van Loc
+# Email: donbb6823@gmail.com
+# License: MIT License
+# =============================================================================
 
 # $1: option
 # $2: default value
@@ -18,8 +18,10 @@ tmux_set() {
 }
 
 # Options
-right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' '')
-left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' '')
+# right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' '')
+# left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' '')
+right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' ' ')
+left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' ' ')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '')
 download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '')
 session_icon="$(tmux_get '@tmux_power_session_icon' '')"
@@ -31,7 +33,7 @@ show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 # short for Theme-Colour
-TC=$(tmux_get '@tmux_power_theme' 'gold')
+TC=$(tmux_get '@tmux_power_theme' 'custom-snow')
 case $TC in
     'gold' )
         TC='#ffb86c'
@@ -50,6 +52,9 @@ case $TC in
         ;;
     'snow' )
         TC='#999696'
+        ;;
+    'custom-snow' )
+        TC='#c0bebe'
         ;;
     'coral' )
         TC='#ff7f50'
