@@ -33,9 +33,9 @@ prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 # short for Theme-Colour
 TC=$(tmux_get '@tmux_power_theme' 'snow')
 case $TC in
-    'gold' )
-        TC='#ffb86c'
-        ;;
+    # 'gold' )
+    #     TC='#ffb86c'
+    #     ;;
     'redwine' )
         TC='#b34a47'
         ;;
