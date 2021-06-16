@@ -4,6 +4,8 @@
 # License: MIT License
 # =============================================================================
 
+# PRE-CONFIGS
+# ==========
 # $1: option
 # $2: default value
 tmux_get() {
@@ -17,7 +19,8 @@ tmux_set() {
     tmux set-option -gq "$1" "$2"
 }
 
-# Options
+# OPTIONS
+# ==========
 right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' ' ')
 left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' ' ')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '')
@@ -30,12 +33,14 @@ show_upload_speed="$(tmux_get @tmux_power_show_upload_speed false)"
 show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
-# short for Theme-Colour
+
+# SHORT FOR THEME-COLOUR
+# ----------
 TC=$(tmux_get '@tmux_power_theme' 'snow')
 case $TC in
-    # 'gold' )
-    #     TC='#ffb86c'
-    #     ;;
+    'gold' )
+        TC='#ffb86c'
+        ;;
     'redwine' )
         TC='#b34a47'
         ;;
@@ -78,16 +83,19 @@ G12=#767676 #243
 FG="$G10"
 BG="$G04"
 
-# Status options
+# STATUS OPTIONS
+# ----------
 tmux_set status-interval 1
 tmux_set status on
 
-# Basic status bar colors
+# BASIC STATUS BAR COLORS
+# ----------
 tmux_set status-fg "$FG"
 tmux_set status-bg "$BG"
 tmux_set status-attr none
 
-# tmux-prefix-highlight
+# TMUX-PREFIX-HIGHLIGHT
+# ----------
 tmux_set @prefix_highlight_fg "$BG"
 tmux_set @prefix_highlight_bg "$FG"
 tmux_set @prefix_highlight_show_copy_mode 'on'
@@ -96,7 +104,8 @@ tmux_set @prefix_highlight_output_prefix "#[fg=$TC]#[bg=$BG]$left_arrow_icon#[bg
 tmux_set @prefix_highlight_output_suffix "#[fg=$TC]#[bg=$BG]$right_arrow_icon"
 
 #     
-# Left side of status bar
+# LEFT SIDE OF STATUS BAR
+# ----------
 tmux_set status-left-bg "$G04"
 tmux_set status-left-fg "G12"
 tmux_set status-left-length 150
@@ -112,7 +121,8 @@ if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
 fi
 tmux_set status-left "$LS"
 
-# Right side of status bar
+# RIGHT SIDE OF STATUS BAR
+# ----------
 tmux_set status-right-bg "$G04"
 tmux_set status-right-fg "G12"
 tmux_set status-right-length 150
@@ -128,39 +138,51 @@ if [[ $prefix_highlight_pos == 'R' || $prefix_highlight_pos == 'LR' ]]; then
 fi
 tmux_set status-right "$RS"
 
-# Window status
+# WINDOW STATUS
+# ----------
 tmux_set window-status-format "#I:#W "
 tmux_set window-status-current-format "#[fg=$BG,bg=$G06]$right_arrow_icon#[fg=$TC,bold]#I:#W #[fg=$G06,bg=$BG,nobold]$right_arrow_icon"
 
-# Window separator
+# WINDOW SEPARATOR
+# ----------
 tmux_set window-status-separator ""
 
-# Window status alignment
-# tmux_set status-justify centre
+# WINDOW STATUS ALIGNMENT
+# ==========
+# TMUX_SET STATUS-JUSTIFY CENTRE
+# ----------
 tmux_set status-justify left
 
-# Current window status
+# CURRENT WINDOW STATUS
+# ----------
 tmux_set window-status-current-statys "fg=$TC,bg=$BG"
 
-# Pane border
+# PANE BORDER
+# ----------
 tmux_set pane-border-style "fg=$G07,bg=default"
 
-# Active pane border
+# ACTIVE PANE BORDER
+# ----------
 tmux_set pane-active-border-style "fg=$TC,bg=$BG"
 
-# Pane number indicator
+# PANE NUMBER INDICATOR
+# ----------
 tmux_set display-panes-colour "$G07"
 tmux_set display-panes-active-colour "$TC"
 
-# Clock mode
+# CLOCK MODE
+# ----------
 tmux_set clock-mode-colour "$TC"
 tmux_set clock-mode-style 24
 
-# Message
+# MESSAGE
+# ----------
 tmux_set message-style "fg=$TC,bg=$BG"
 
-# Command message
+# COMMAND MESSAGE
+# ----------
 tmux_set message-command-style "fg=$TC,bg=$BG"
 
-# Copy mode highlight
+# COPY MODE HIGHLIGHT
+# ----------
 tmux_set mode-style "bg=$TC,fg=$FG"
