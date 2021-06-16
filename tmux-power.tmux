@@ -33,7 +33,7 @@ show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 # short for Theme-Colour
-TC=$(tmux_get '@tmux_power_theme' 'custom-snow')
+TC="$(tmux_get '@tmux_power_theme' 'custom-snow')"
 case $TC in
     'gold' )
         TC='#ffb86c'
