@@ -6,6 +6,7 @@
 
 # PRE-CONFIGS
 # ==========
+
 # $1: option
 # $2: default value
 tmux_get() {
@@ -19,8 +20,10 @@ tmux_set() {
     tmux set-option -gq "$1" "$2"
 }
 
+
 # OPTIONS
 # ==========
+
 right_arrow_icon=$(tmux_get '@tmux_power_right_arrow_icon' ' ')
 left_arrow_icon=$(tmux_get '@tmux_power_left_arrow_icon' ' ')
 upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '')
@@ -147,8 +150,10 @@ tmux_set window-status-current-format "#[fg=$BG,bg=$G06]$right_arrow_icon#[fg=$T
 # ----------
 tmux_set window-status-separator ""
 
+
 # WINDOW STATUS ALIGNMENT
 # ==========
+
 # TMUX_SET STATUS-JUSTIFY CENTRE
 # ----------
 tmux_set status-justify left
