@@ -160,7 +160,7 @@ tmux_set status-justify left
 
 # CURRENT WINDOW STATUS
 # ----------
-tmux_set window-status-current-statys "fg=$TC,bg=$BG"
+tmux_set window-status-current-style "fg=$TC,bg=$BG"
 
 # PANE BORDER
 # ----------
