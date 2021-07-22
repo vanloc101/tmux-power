@@ -190,4 +190,4 @@ tmux_set message-command-style "fg=$TC,bg=$BG"
 
 # COPY MODE HIGHLIGHT
 # ----------
-tmux_set mode-style "bg=$TC,fg=$G02"
+tmux_set mode-style "bg=$TC,fg=$G01"
