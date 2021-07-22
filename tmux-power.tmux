@@ -86,6 +86,9 @@ G12=#767676 #243
 FG="$G12"
 BG="$G04"
 
+TFG=#d4d4d4
+TBG=#1e1e1e
+
 # STATUS OPTIONS
 # ----------
 tmux_set status-interval 1
@@ -168,7 +171,7 @@ tmux_set pane-border-style "fg=$G07,bg=default"
 
 # ACTIVE PANE BORDER
 # ----------
-tmux_set pane-active-border-style "fg=$TC,bg=#1e1e1e"
+tmux_set pane-active-border-style "fg=$TC,bg=$TBG"
 
 # PANE NUMBER INDICATOR
 # ----------
@@ -182,11 +185,11 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$TC,bg=$G05"
+tmux_set message-style "fg=$TFG,bg=$G05"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$TC,bg=$G05"
+tmux_set message-command-style "fg=$TFG,bg=$G05"
 
 # COPY MODE HIGHLIGHT
 # ----------
