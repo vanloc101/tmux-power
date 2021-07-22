@@ -182,11 +182,11 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$G01,bg=$TC"
+tmux_set message-style "fg=$TC,bg=$G05"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$G01,bg=$TC"
+tmux_set message-command-style "fg=$TC,bg=$G05"
 
 # COPY MODE HIGHLIGHT
 # ----------
