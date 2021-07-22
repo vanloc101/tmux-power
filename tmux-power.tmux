@@ -57,7 +57,7 @@ case $TC in
         TC='#9370db'
         ;;
     'snow' )
-        TC='#c0bebe'
+        TC='#ecebeb'
         ;;
     'coral' )
         TC='#ff7f50'
@@ -168,11 +168,11 @@ tmux_set pane-border-style "fg=$G07,bg=default"
 
 # ACTIVE PANE BORDER
 # ----------
-tmux_set pane-active-border-style "fg=$TC,bg=$BG"
+tmux_set pane-active-border-style "fg=$TC,bg=#1e1e1e"
 
 # PANE NUMBER INDICATOR
 # ----------
-tmux_set display-panes-colour "$G07"
+tmux_set display-panes-colour "$G08"
 tmux_set display-panes-active-colour "$TC"
 
 # CLOCK MODE
@@ -182,11 +182,11 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$TC,bg=$BG"
+tmux_set message-style "fg=$TC,bg=$G03"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$TC,bg=$BG"
+tmux_set message-command-style "fg=$TC,bg=$G03"
 
 # COPY MODE HIGHLIGHT
 # ----------
