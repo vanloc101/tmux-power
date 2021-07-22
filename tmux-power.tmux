@@ -57,7 +57,7 @@ case $TC in
         TC='#9370db'
         ;;
     'snow' )
-        TC='#ecebeb'
+        TC='#d2d1d1'
         ;;
     'coral' )
         TC='#ff7f50'
@@ -83,7 +83,7 @@ G10=#626262 #241
 G11=#6c6c6c #242
 G12=#767676 #243
 
-FG="$G10"
+FG="$G12"
 BG="$G04"
 
 # STATUS OPTIONS
@@ -182,11 +182,11 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$TC,bg=$G03"
+tmux_set message-style "fg=$G01,bg=$TC"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$TC,bg=$G03"
+tmux_set message-command-style "fg=$G01,bg=$TC"
 
 # COPY MODE HIGHLIGHT
 # ----------
