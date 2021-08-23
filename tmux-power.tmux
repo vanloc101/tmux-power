@@ -37,39 +37,8 @@ show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 
-# SHORT FOR THEME-COLOUR
+# THEME-COLOUR
 # ----------
-# TC=$(tmux_get '@tmux_power_theme' 'snow')
-# case $TC in
-#     'gold' )
-#         TC='#ffb86c'
-#         ;;
-#     'redwine' )
-#         TC='#b34a47'
-#         ;;
-#     'moon' )
-#         TC='#00abab'
-#         ;;
-#     'forest' )
-#         TC='#228b22'
-#         ;;
-#     'violet' )
-#         TC='#9370db'
-#         ;;
-#     'snow' )
-#         TC='#d2d1d1'
-#         ;;
-#     'coral' )
-#         TC='#ff7f50'
-#         ;;
-#     'sky' )
-#         TC='#87ceeb'
-#         ;;
-#     'default' ) # Useful when your term changes colour dynamically (e.g. pywal)
-#         TC='colour3'
-#         ;;
-# esac
-
 TC=#D2D2D2
 
 G01=#080808 #232
@@ -195,4 +164,4 @@ tmux_set message-command-style "fg=$TFG,bg=$G08"
 
 # COPY MODE HIGHLIGHT
 # ----------
-tmux_set mode-style "bg=$TC,fg=$G01"
+tmux_set mode-style "bg=$TC,fg=$G09"
