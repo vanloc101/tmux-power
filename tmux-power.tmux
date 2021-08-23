@@ -37,9 +37,9 @@ show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
 show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
 prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 
-# THEME-COLOUR
+# THEME COLOR
 # ----------
-TC=#D2D2D2
+TC=#CECECE
 
 G01=#080808 #232
 G02=#121212 #233
@@ -57,7 +57,6 @@ G12=#767676 #243
 FG="$G12"
 BG="$G04"
 
-TFG=#d4d4d4
 TBG=#1e1e1e
 
 # STATUS OPTIONS
@@ -156,12 +155,12 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$TFG,bg=$G08"
+tmux_set message-style "fg=$G01,bg=$TC"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$TFG,bg=$G08"
+tmux_set message-command-style "fg=$G01,bg=$TC"
 
 # COPY MODE HIGHLIGHT
 # ----------
-tmux_set mode-style "bg=$TC,fg=$G09"
+tmux_set mode-style "fg=$G01,bg=$TC"
