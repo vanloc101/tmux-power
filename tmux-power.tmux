@@ -39,36 +39,38 @@ prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
 
 # SHORT FOR THEME-COLOUR
 # ----------
-TC=$(tmux_get '@tmux_power_theme' 'snow')
-case $TC in
-    'gold' )
-        TC='#ffb86c'
-        ;;
-    'redwine' )
-        TC='#b34a47'
-        ;;
-    'moon' )
-        TC='#00abab'
-        ;;
-    'forest' )
-        TC='#228b22'
-        ;;
-    'violet' )
-        TC='#9370db'
-        ;;
-    'snow' )
-        TC='#d2d1d1'
-        ;;
-    'coral' )
-        TC='#ff7f50'
-        ;;
-    'sky' )
-        TC='#87ceeb'
-        ;;
-    'default' ) # Useful when your term changes colour dynamically (e.g. pywal)
-        TC='colour3'
-        ;;
-esac
+# TC=$(tmux_get '@tmux_power_theme' 'snow')
+# case $TC in
+#     'gold' )
+#         TC='#ffb86c'
+#         ;;
+#     'redwine' )
+#         TC='#b34a47'
+#         ;;
+#     'moon' )
+#         TC='#00abab'
+#         ;;
+#     'forest' )
+#         TC='#228b22'
+#         ;;
+#     'violet' )
+#         TC='#9370db'
+#         ;;
+#     'snow' )
+#         TC='#d2d1d1'
+#         ;;
+#     'coral' )
+#         TC='#ff7f50'
+#         ;;
+#     'sky' )
+#         TC='#87ceeb'
+#         ;;
+#     'default' ) # Useful when your term changes colour dynamically (e.g. pywal)
+#         TC='colour3'
+#         ;;
+# esac
+
+TC=#D2D2D2
 
 G01=#080808 #232
 G02=#121212 #233
@@ -185,11 +187,11 @@ tmux_set clock-mode-style 24
 
 # MESSAGE
 # ----------
-tmux_set message-style "fg=$TFG,bg=$G05"
+tmux_set message-style "fg=$TFG,bg=$G08"
 
 # COMMAND MESSAGE
 # ----------
-tmux_set message-command-style "fg=$TFG,bg=$G05"
+tmux_set message-command-style "fg=$TFG,bg=$G08"
 
 # COPY MODE HIGHLIGHT
 # ----------
